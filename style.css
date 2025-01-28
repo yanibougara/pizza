@@ -165,7 +165,7 @@ main {
 }
 
 .marguerita-image {
-    background-image: url("marguerita.png"); /* Chemin vers votre image */
+    background-image: url("./images/marguerita.png"); /* Chemin vers votre image */
     background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
     background-position: center; /* Centre l'image */
     width: 75%;
@@ -176,7 +176,7 @@ main {
 }
 
 .americaine-image {
-    background-image: url("americaine.png"); /* Chemin vers votre image */
+    background-image: url("./images/americaine.png"); /* Chemin vers votre image */
     background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
     background-position: center; /* Centre l'image */
     width: 75%;
@@ -295,440 +295,176 @@ h2 {
     text-align: center;
     margin-top: 20px;
 }
-
-.vittel-image {
-    background-image: url("vittel.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
+/* Style de base pour toutes les images */
+.image {
+    background-size: cover;
+    background-position: center;
     width: 75%;
     height: 130px;
     border-radius: 6px 6px 0 0;
     transition: transform 0.3s ease;
     justify-self: center;
+}
+
+/* Images spécifiques */
+.vittel-image {
+    background-image: url("./images/vittel.png");
 }
 
 .cocazero-image {
-    background-image: url("cocazero.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/cocazero.png");
 }
 
 .oasis-image {
-    background-image: url("oasis.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/oasis.png");
 }
 
 .icetea-image {
-    background-image: url("icetea.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/icetea.png");
 }
 
 .orangina-image {
-    background-image: url("orangina.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/orangina.png");
 }
 
 .fanta-image {
-    background-image: url("fanta.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/fanta.png");
 }
 
 .coca-image {
-    background-image: url("coca.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/coca.png");
 }
 
 .brownie-image {
-    background-image: url("brownie.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/brownie.png");
 }
 
 .thon-image {
-    background-image: url("thon.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/thon.png");
 }
 
 .fromages-image {
-    background-image: url("4fromages.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/4fromages.png");
 }
 
 .cheeseburger-image {
-    background-image: url("cheeseburger.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/cheeseburger.png");
 }
 
 .orientale-image {
-    background-image: url("orientale.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/orientale.png");
 }
 
 .australienne-image {
-    background-image: url("australienne.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/australienne.png");
 }
 
 .vegetarienne-image {
-    background-image: url("vegetarienne.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/vegetarienne.png");
 }
 
 .napolitaine-image {
-    background-image: url("napolitaine.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/napolitaine.png");
 }
 
 .andalouse-image {
-    background-image: url("andalouse.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/andalouse.png");
 }
 
 .shawarma-image {
-    background-image: url("shawarma.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/shawarma.png");
 }
 
 .mozzastick-image {
-    background-image: url("mozzastick.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/mozzastick.png");
 }
 
 .wings-image {
-    background-image: url("wings.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/wings.png");
 }
 
 .nuggets-image {
-    background-image: url("nuggets.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/nuggets.png");
 }
 
 .pouletpane-image {
-    background-image: url("pouletpane.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/pouletpane.png");
 }
 
 .mexicaine-image {
-    background-image: url("mexicaine.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/mexicaine.png");
 }
 
 .potatoes-image {
-    background-image: url("potatoes.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/potatoes.png");
 }
 
 .hawaienne-image {
-    background-image: url("hawaienne.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
+    background-image: url("./images/hawaienne.png");
 }
 
+.crudite-image {
+    background-image: url("./images/crudite.png");
+}
+
+.grecque-image {
+    background-image: url("./images/grecque.png");
+}
+
+.nicoise-image {
+    background-image: url("./images/nicoise.png");
+}
+
+.italienne-image {
+    background-image: url("./images/italienne.png");
+}
+
+.ny-image {
+    background-image: url("./images/ny.png");
+}
+
+.cookie-image {
+    background-image: url("./images/cookie.png");
+}
+
+.glacebrownie-image {
+    background-image: url("./images/glacebrownie.png");
+}
+
+.peanut-image {
+    background-image: url("./images/peanut.png");
+}
+
+.pecan-image {
+    background-image: url("./images/pecan.png");
+}
+
+.fudge-image {
+    background-image: url("./images/fudge.png");
+}
+
+.muffin-image {
+    background-image: url("./images/muffin.png");
+}
+
+.sanpel-image {
+    background-image: url("./images/sanpel.png");
+}
+
+.bouchee-image {
+    background-image: url("./images/bouchee.png");
+}
+
+.jalapeno-image {
+    background-image: url("./images/jalapeno.png");
+}
+
+/* Classe pour les avis */
 .avis {
     justify-self: center;
     font-family: "KGHAPPYSolid", sans-serif;
 }
 
-.crudite-image {
-    background-image: url("crudite.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.grecque-image {
-    background-image: url("grecque.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.nicoise-image {
-    background-image: url("nicoise.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.italienne-image {
-    background-image: url("italienne.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.ny-image {
-    background-image: url("ny.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.cookie-image {
-    background-image: url("cookie.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.glacebrownie-image {
-    background-image: url("glacebrownie.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.brownie-image {
-    background-image: url("brownie.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.peanut-image {
-    background-image: url("peanut.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.pecan-image {
-    background-image: url("pecan.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.fudge-image {
-    background-image: url("fudge.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.muffin-image {
-    background-image: url("muffin.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.sanpel-image {
-    background-image: url("sanpel.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.bouchee-image {
-    background-image: url("bouchee.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
-
-.jalapeno-image {
-    background-image: url("jalapeno.png"); /* Chemin vers votre image */
-    background-size: cover; /* Ajuste la taille de l'image pour remplir le conteneur */
-    background-position: center; /* Centre l'image */
-    width: 75%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    transition: transform 0.3s ease;
-    justify-self: center;
-}
 
 .banderole {
     width: 100px;
@@ -1027,21 +763,6 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Média queries pour le responsive */
 
 /* Mobile (moins de 600px) */
@@ -1067,8 +788,8 @@ body {
     }
 
     [class*="-image"] {
-        width: 90%;
-        height: 100px;
+         width: 70%;
+        height: 120px;
     }
 
     .opening-hours {
@@ -1083,7 +804,35 @@ body {
     .opening-hours p {
         font-size: 14px;
     }
+
+    .nav-links {
+       font-size: 10px;
+    }
+
+    h1 {
+        font-size: 100%;
+    width: 120%;
+    }
+
+    .avis {
+        text-align: center;
+    }
+    .logo {
+      width: 10%;
+    height: 10%;
 }
+.banderole {
+    width: 15%;
+    height: 15%;
+}
+
+
+.heading {
+
+    justify-self: center;
+}
+}
+
 
 /* Tablettes (600px à 1024px) */
 @media (min-width: 600px) and (max-width: 1024px) {
@@ -1136,4 +885,15 @@ body {
         width: 75%;
         height: 130px;
     }
+}
+
+
+
+
+
+.footer {
+    background: linear-gradient(90deg, rgb(239, 101, 59) 0%, rgb(239, 59, 52) 43%, rgb(255, 91, 66) 64%);
+
+    text-align: center;
+    padding: 20px 0;
 }
