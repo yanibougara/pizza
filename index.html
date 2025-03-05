@@ -11,26 +11,67 @@
     </head>
 
     <body>
-        <header class="header">
-            <div class="container">
-                <!-- Logo à gauche -->
-                <img src="./images/logo.png" alt="Logo" class="logo" />
+       <header class="header">
+    <div class="container">
+        <!-- Logo et branding -->
+        <div class="logo-container">
+  
+            <img src="./images/pizzawest.png" alt="Pizza West" class="banderole" />
+        </div>
+        
+        <!-- Button pour menu mobile -->
+        <button class="mobile-menu-btn" aria-label="Menu" onclick="toggleMobileMenu()">
+            <i class="menu-icon">☰</i>
+        </button>
+        
+        <!-- Navigation container -->
+        <div class="nav-container" id="navContainer">
+            <ul class="nav-links">
+                <li><a href="#pizzas" class="active">Pizzas</a></li>
+                <li><a href="#entrees">Entrées</a></li>
+                <li><a href="#salades">Salades</a></li>
+                <li><a href="#boissons">Boissons</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+            </ul>
+            <button class="order-now-btn">Commander</button>
+        </div>
+    </div>
+</header>
 
-                <!-- Texte centré et navigation -->
-                <nav>
-                    <img src="./images/pizzawest.png" alt="Logo" class="banderole" />
-                
-                    <ul class="nav-links">
-                        <li><a href="#pizzas"> pizzas</a></li>
-                        <li><a href="#entrees"> entrées</a></li>
-                        <li><a href="#salades"> salades</a></li>
-                        <li><a href="#boissons"> boissons</a></li>
-                        <li><a href="#desserts"> desserts</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
+<!-- Script pour la navbar responsive -->
+<script>
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        const navContainer = document.getElementById('navContainer');
+        navContainer.classList.toggle('open');
+        
+        // Toggle menu icon
+        const menuIcon = document.querySelector('.menu-icon');
+        if (navContainer.classList.contains('open')) {
+            menuIcon.textContent = '✕';
+        } else {
+            menuIcon.textContent = '☰';
+        }
+    }
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navContainer').classList.remove('open');
+            document.querySelector('.menu-icon').textContent = '☰';
+        });
+    });
+    
+    // Add scrolled class to header on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
         <div class="google-review">
             <!-- Logo Google -->
             <div class="logos">
@@ -64,8 +105,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="text-section">
+      <div class="text-section">
                 <h2>
                     La meilleure <br />façon de<br />
                     se régaler
@@ -90,11 +130,8 @@
         </h1>
     </body>
 </html>
-
-
-        <main>
-            
-            <div class="allCards">
+     <main>
+                <div class="allCards">
                 <!-- Carte 1 -->
                 <div class="container1">
                     <div class="card">
@@ -104,11 +141,9 @@
                         <div class="heading">
                             Pate au choix, sauce tomate, mozzarella
                         </div>
-                                          <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                                          <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
-
-                <!-- Carte 2 -->
                 <div class="container1">
                     <div class="card">
                         <div class="cheeseburger-image"></div>
@@ -118,34 +153,32 @@
                             ,oignons frais ,viande hachée ,cheddar,sauce
                             biggy
                         </div>
-                                          <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                                          <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
-                <!-- Carte 3 -->
                 <div class="container1">
                     <div class="card">
                         <div class="orientale-image"></div>
                         <div class="category">Orientale</div>
                         <div class="heading">
-                            pate au choix, sauce tomate, mozzarella, merguez,
+                            sauce tomate, mozzarella, merguez,
                             poivrons verts, oignons frais, olives noires, oeuf
                         </div>
-                         <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                         <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
-                <!-- Ajoutez toutes les autres cartes ici -->
                 <div class="container1">
                     <div class="card">
                         <div class="australienne-image"></div>
                         <div class="category">Australienne</div>
                         <div class="heading">
-                            pate au choix, sauce barbecue, double mozzarella
+                            sauce barbecue, double mozzarella
                             ,oignons frais ,boeuf, champignons frais, creme
                             fraiche
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -154,10 +187,10 @@
                         <div class="hawaienne-image"></div>
                         <div class="category">Hawaienne</div>
                         <div class="heading">
-                            pate au choix, sauce tomate, mozzarella, ananas,
+                            sauce tomate, mozzarella, ananas,
                             viande au choix
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -166,10 +199,10 @@
                         <div class="napolitaine-image"></div>
                         <div class="category">Napolitaine</div>
                         <div class="heading">
-                            pate au choix, sauce tomate, double mozzarella,
+                            sauce tomate, double mozzarella,
                             anchoix, tomates fraiches et olive
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -178,10 +211,10 @@
                         <div class="card-image"></div>
                         <div class="category">Calzone</div>
                         <div class="heading">
-                            pate au choix, sauce tomate, mozzarella, jambon,
+                            sauce tomate, mozzarella, jambon,
                             oeuf et emmental
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -190,10 +223,10 @@
                         <div class="ny-image"></div>
                         <div class="category">New Yorkaise</div>
                         <div class="heading">
-                            pate au choix, sauce tomate, double mozzarella,
+                            sauce tomate, double mozzarella,
                             pepperonni, jambon, viande haché
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -202,11 +235,11 @@
                         <div class="card-image"></div>
                         <div class="category">Big West</div>
                         <div class="heading">
-                            pate au choix, sauce tomate, double mozzarella,
+                          sauce tomate, double mozzarella,
                             oignons frais, poivrons verts, champignons frais,
                             olives noires, jambon, pepperoni, boeuf
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -215,10 +248,10 @@
                         <div class="andalouse-image"></div>
                         <div class="category">Andalouse</div>
                         <div class="heading">
-                            pate au choix, creme fraiche, mozzarella, poulet
+                           creme fraiche, mozzarella, poulet
                             roti,chorizo ,tomates fraiches
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -227,11 +260,11 @@
                         <div class="vegetarienne-image"></div>
                         <div class="category">Végétarienne</div>
                         <div class="heading">
-                            pate au choix ,sauce tomate, double mozzarella,
+                          sauce tomate, double mozzarella,
                             oignons frais, poivrons verts, champignons frais,
                             olives noires, artichauds
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -240,10 +273,10 @@
                         <div class="fromages-image"></div>
                         <div class="category">4 fromages</div>
                         <div class="heading">
-                            pate au choix ,sauce tomate ,double mozzarella
+                         sauce tomate ,double mozzarella
                             ,chevres ,chevre ,fourme d'ambert ,emmental
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -252,10 +285,10 @@
                         <div class="card-image"></div>
                         <div class="category">Chili beef</div>
                         <div class="heading">
-                            pate au choix, sauce tomate ,mozzarella, oignons
+                            sauce tomate ,mozzarella, oignons
                             frais, boeuf, tomates fraiches, piment
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -264,23 +297,23 @@
                         <div class="shawarma-image"></div>
                         <div class="category">Shawarma</div>
                         <div class="heading">
-                            pate au choix ,creme fraiche ,mozzarella ,poivrons
+                         creme fraiche ,mozzarella ,poivrons
                             frais ,oignons frais, tomates fraiches et viande de
                             kebab
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
                 <div class="container1">
                     <div class="card">
-                        <div class="card-image"></div>
+                        <div class="chicken-image"></div>
                         <div class="category">Chicken</div>
                         <div class="heading">
-                            pate au choix ,sauce tomate ,double mozzarella
+                            sauce tomate ,double mozzarella
                             ,poulet roti ,oignons frais et creme fraiche
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -291,10 +324,10 @@
                         <div class="americaine-image"></div>
                         <div class="category">Americaine</div>
                         <div class="heading">
-                            pate au choix ,sauce tomate ,double mozzarella
+                            sauce tomate ,double mozzarella
                             ,double pepperonni
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -303,7 +336,7 @@
                         <div class="card-image"></div>
                         <div class="category">Monstrueuse</div>
                         <div class="heading">
-                            pate au choix, sauce tomate,
+                            double mozzarella, bœuf, poulet rôti et merguez
                         </div>
                         <div class="category">sur place: 8.90<br>livraison: 12.90</div>
                     </div>
@@ -311,34 +344,12 @@
 
                 <div class="container1">
                     <div class="card">
-                        <div class="card-image"></div>
+                        <div class="regina-image"></div>
                         <div class="category">Regina</div>
                         <div class="heading">
-                            pepperonni, sauce tomate, poivrons verts, origan
+                            double mozzarella, jambon et champignons frais
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
-                    </div>
-                </div>
-
-                <div class="container1">
-                    <div class="card">
-                        <div class="card-image"></div>
-                        <div class="category">Romaine</div>
-                        <div class="heading">
-                            pepperonni, sauce tomate, poivrons verts, origan
-                        </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
-                    </div>
-                </div>
-
-                <div class="container1">
-                    <div class="card">
-                        <div class="card-image"></div>
-                        <div class="category">Australienne</div>
-                        <div class="heading">
-                            pepperonni, sauce tomate, poivrons verts, origan
-                        </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -347,9 +358,9 @@
                         <div class="card-image"></div>
                         <div class="category">Canadian bacon</div>
                         <div class="heading">
-                            pepperonni, sauce tomate, poivrons verts, origan
+                            crème fraîche, mozzarella, canadian bacon, jambon et œuf
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -358,20 +369,21 @@
                         <div class="card-image"></div>
                         <div class="category">Norvégienne</div>
                         <div class="heading">
-                            pepperonni, sauce tomate, poivrons verts, origan
+                            sauce tomate, double mozzarella, pomme de terre, saumon fumé et crème fraîche
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
                 <div class="container1">
                     <div class="card">
-                        <div class="card-image"></div>
+                        <div class="savoyarde-image"></div>
                         <div class="category">Savoyarde</div>
                         <div class="heading">
-                            pepperonni, sauce tomate, poivrons verts, origan
+                          crème fraîche, mozzarella, jambon, pommes de terre, reblochon de Savoie AOP et lardons fumés
+
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -380,9 +392,9 @@
                         <div class="thon-image"></div>
                         <div class="category">Mediteranée</div>
                         <div class="heading">
-                            pepperonni, sauce tomate, poivrons verts, origan
+                            sauce tomate, double mozzarella, poivrons frais, thon, chèvre et crème fraîche
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 
@@ -391,24 +403,72 @@
                         <div class="card-image"></div>
                         <div class="category">4 saisons</div>
                         <div class="heading">
-                            pepperonni, sauce tomate, poivrons verts, origan
+                            sauce tomate, double mozzarella, jambon, champignons frais, artichaut et olives
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
 <section id="entrees">
                 <div class="container1">
                     <div class="card">
-                        <div class="card-image"></div>
+                        <div class="napolitaine-image"></div>
                         <div class="category">Napolitaine</div>
                         <div class="heading">
-                            pepperonni, sauce tomate, poivrons verts, origan
+                            sauce tomate, double mozzarella, anchois, tomates fraîches et olives
                         </div>
-                        <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                        <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     </div>
                 </div>
             </div>
             </section>
+
+<div class="content-section1">
+    <div class="pizza-menu1">
+        <h2> Personnalisez votre Pizza 🍕</h2>
+        <p>Choisissez votre pâte et ajoutez des suppléments délicieux !</p>
+        
+        <div class="pizza-options1">
+            <div class="dough-options1">
+                <h3>Pâte :</h3>
+                <span class="dough-type1">Classique /</span>
+                <span class="dough-type1">Fine</span>
+            </div>
+            
+            <div class="toppings1">
+                <h3>Suppléments :</h3>
+                <div class="topping-list1">
+                    <span class="topping1">Oignons <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Poivrons verts <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Champignons <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Olives <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Reblochon <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Ananas <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Pommes de terre <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Jambon <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Lardons <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Chorizo <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Saucisson <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Pepperoni <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Bœuf épicé <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Merguez <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Poulet rôti <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Anchois <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Thon <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Saumon <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Œuf <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Tomates fraîches <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Crème fraîche <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Chèvre <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Double mozzarella <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Emmental <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Fourme d'Ambert <span class="price1">+1,40 €</span></span>
+                    <span class="topping1">Viande hachée <span class="price1">+1,40 €</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
         </main>
 
         <h1 
@@ -425,7 +485,7 @@
                     <div class="heading">
                         6 pièces,filet de poulet pané légèrement citronné
                     </div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -434,7 +494,7 @@
                     <div class="mozzastick-image"></div>
                     <div class="category">Mozzarella sticks</div>
                     <div class="heading">8 pièces</div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -443,7 +503,7 @@
                     <div class="bouchee-image"></div>
                     <div class="category">Bouchées de camembert</div>
                     <div class="heading">8 pièces</div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -454,7 +514,7 @@
                     <div class="heading">
                         4 pièces,piments farcis au fromage
                     </div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -463,7 +523,7 @@
                     <div class="wings-image"></div>
                     <div class="category">Chicken wings</div>
                     <div class="heading">8 pièces</div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -472,7 +532,7 @@
                     <div class="potatoes-image"></div>
                     <div class="category">Potatoes</div>
                     <div class="heading">La portion</div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -481,7 +541,7 @@
                     <div class="nuggets-image"></div>
                     <div class="category">Nuggets</div>
                     <div class="heading">8 pièces</div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
         </div>
@@ -501,7 +561,7 @@
                     <div class="heading">
                         Salade, tomates cerises ,poulet et mais
                     </div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -510,7 +570,7 @@
                     <div class="crudite-image"></div>
                     <div class="category">Salade de crudités</div>
                     <div class="heading">Salade et tomates cerises</div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -521,7 +581,7 @@
                     <div class="heading">
                         Salade,tomates cerises,olive noire et feta
                     </div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -532,7 +592,7 @@
                     <div class="heading">
                         Salade, thon, tomates cerises,mais
                     </div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 <section id="desserts">
@@ -541,7 +601,7 @@
                     <div class="italienne-image"></div>
                     <div class="category">Salade italienne</div>
                     <div class="heading">Salade, tomates cerises, jambon</div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€br>livraison: 12.90€</div>
                 </div>
             </div>
         </div>
@@ -566,7 +626,7 @@
                         morceaux de pécan caramélisé et des morceaux de gateau
                         fondant
                     </div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -581,7 +641,7 @@
                         glace caramel avec une sauce au caramel salé,brownies
                         fondants au cacao maigres et cookies au chocolat
                     </div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -595,7 +655,7 @@
                         Creme glacée chocolat avec des morceaux de gateaux
                         fondant au cacao
                     </div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -610,7 +670,7 @@
                         Glace au beurre de cacahuète avec des morceaux de pates
                         au beurre de cacahuète de cacahuète
                     </div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
 
@@ -624,18 +684,9 @@
                         Glace vanille avec des morceaux de pâte à cookie et des
                         pépites de chocolat
                     </div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
             <div class="container1">
                 <div class="card">
                     <div class="brownie-image"></div>
@@ -648,7 +699,7 @@
                 <div class="card">
                     <div class="muffin-image"></div>
                     <div class="category">Muffin au chocolat</div>
-                    <div class="category">sur place: 8.90<br>livraison: 12.90</div>
+                    <div class="category">sur place: 8.90€<br>livraison: 12.90€</div>
                     <div class="heading"></div>
                 </div>
             </div>
@@ -666,7 +717,7 @@
                     <div class="vittel-image"></div>
                     <div class="category">Vittel</div>
                     <div class="heading">50cl</div>
-                    <div class="category"> 8.90</div>
+                    <div class="category"> 8.90€</div>
                 </div>
             </div>
 
@@ -675,7 +726,7 @@
                     <div class="cocazero-image"></div>
                     <div class="category">Coca-Cola Zéro</div>
                     <div class="heading">33cl</div>
-                    <div class="category"> 8.90</div>
+                    <div class="category"> 8.90€</div>
                 </div>
             </div>
 
@@ -684,7 +735,7 @@
                     <div class="oasis-image"></div>
                     <div class="category">Oasis tropical</div>
                     <div class="heading">33cl</div>
-                    <div class="category"> 8.90</div>
+                    <div class="category"> 8.90€</div>
                 </div>
             </div>
 
@@ -693,7 +744,7 @@
                     <div class="icetea-image"></div>
                     <div class="category">Ice Tea Pêche</div>
                     <div class="heading">33cl</div>
-                    <div class="category"> 8.90</div>
+                    <div class="category"> 8.90€</div>
                 </div>
             </div>
 
@@ -702,7 +753,7 @@
                     <div class="orangina-image"></div>
                     <div class="category">Orangina</div>
                     <div class="heading">33cl</div>
-                    <div class="category"> 8.90</div>
+                    <div class="category"> 8.90€</div>
                 </div>
             </div>
 
@@ -711,7 +762,7 @@
                     <div class="fanta-image"></div>
                     <div class="category">Fanta</div>
                     <div class="heading">33cl</div>
-                    <div class="category"> 8.90</div>
+                    <div class="category"> 8.90€</div>
                 </div>
             </div>
 
@@ -720,7 +771,16 @@
                     <div class="coca-image"></div>
                     <div class="category">Coca</div>
                     <div class="heading">33cl</div>
-                    <div class="category"> 8.90</div>
+                    <div class="category"> 8.90€</div>
+                </div>
+            </div>
+
+                       <div class="container1">
+                <div class="card">
+                    <div class="coca-image"></div>
+                    <div class="category">Heineken</div>
+                    <div class="heading">33cl</div>
+                    <div class="category"> 8.90€</div>
                 </div>
             </div>
 
@@ -730,21 +790,64 @@
                     <div class="category">San Pellegrino</div>
                     
                     <div class="heading">50cl</div>
-                    <div class="category"> 8.90</div>
+                    <div class="category"> 8.90€</div>
+                </div>
+            </div>
+
+                        <div class="container1">
+                <div class="card">
+                    <div class="oranginaXL-image"></div>
+                    <div class="category">orangina</div>
+                    
+                    <div class="heading">1,5 L</div>
+                    <div class="category"> 8.90€</div>
+                </div>
+            </div>
+
+                                    <div class="container1">
+                <div class="card">
+                    <div class="oranginaXL-image"></div>
+                    <div class="category">Ice Tea</div>
+                    
+                    <div class="heading">1,5 L</div>
+                    <div class="category"> 8.90€</div>
+                </div>
+            </div>
+
+                                                <div class="container1">
+                <div class="card">
+                    <div class="oranginaXL-image"></div>
+                    <div class="category">Coca Cherry</div>
+                    
+                    <div class="heading">1,5 L</div>
+                    <div class="category"> 8.90€</div>
+                </div>
+            </div>
+
+                                                            <div class="container1">
+                <div class="card">
+                    <div class="oranginaXL-image"></div>
+                    <div class="category">Coca Zero</div>
+                    
+                    <div class="heading">1,5 L</div>
+                    <div class="category"> 8.90€</div>
                 </div>
             </div>
         </div>
-        <h1
-            style="padding: 30px 100px; font-family: 'KGHAPPYSolid', sans-serif"
-        >
-           contactez-nous 
-        </h1>
-                <h1
-            style="padding: 0px 100px; font-family: 'KGHAPPYSolid', sans-serif"
-        >
-        49 Rue du Mont Valérien 92210, Saint-Cloud<br>
-        01 41 12 92 92
-        </h1>
+      <h1 
+    class="contact-title"
+    style="font-family: 'KGHAPPYSolid', sans-serif"
+>
+    contactez-nous
+</h1>
+
+<h1 
+    class="contact-info"
+    style="font-family: 'KGHAPPYSolid', sans-serif"
+>
+    49 Rue du Mont Valérien 92210, Saint-Cloud<br>
+    01 41 12 92 92
+</h1>
  <div class="map">
     <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d894.7002564004177!2d2.213087270928837!3d48.8588883937544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e664cb31b25e39%3A0xed7f517c4d85c37d!2sPizza%20West.!5e1!3m2!1sfr!2sfr!4v1737554255733!5m2!1sfr!2sfr" 
