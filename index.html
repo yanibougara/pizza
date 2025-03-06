@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Pizza West vous propose des pizzas savoureuses à des prix imbattables. Découvrez notre menu avec des pizzas, entrées, salades, boissons et desserts." />
-<meta name="keywords" content="pizzas, entrées, salades, boissons, desserts, restaurant, fast food, repas sur place" />
-<meta name="robots" content="index, follow" />
+        <meta name="keywords" content="pizzas, entrées, salades, boissons, desserts, restaurant, fast food, repas sur place" />
+        <meta name="robots" content="index, follow" />
         <title>Pizza West</title>
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -15,7 +15,6 @@
     <div class="container">
         <!-- Logo et branding -->
         <div class="logo-container">
-  
             <img src="./images/pizzawest.png" alt="Pizza West" class="banderole" />
         </div>
         
@@ -26,6 +25,11 @@
         
         <!-- Navigation container -->
         <div class="nav-container" id="navContainer">
+            <!-- Bouton de fermeture du menu mobile -->
+            <div class="close-menu-btn" aria-label="Fermer le menu" onclick="toggleMobileMenu()">
+                <i class="close-icon">✕</i>
+            </div>
+            
             <ul class="nav-links">
                 <li><a href="#pizzas" class="active">Pizzas</a></li>
                 <li><a href="#entrees">Entrées</a></li>
@@ -93,7 +97,7 @@
         <div class="content-section">
             <div class="pizza-menu">
                 <h2>🍕 Nos Pizzas sur place 🍕</h2>
-                <p>Des prix imbattables pour des pizzas incroyables !</p>
+                <p>Des prix imbattables pour des pizzas incroyables !</p>
                 <div class="pizza-prices">
                     <div class="pizza-card">
                         <span class="size">31 cm</span>
@@ -123,8 +127,6 @@
             <p>18:15 - 22:45</p>
         </div>
 </section>
-
-</head>
 
    <div class="menus-wrapper">
     <div class="menu-container">
@@ -169,13 +171,17 @@
 </div>
   
     </div>
-        <h1 
+        <h1 id="pizzas"
             style="padding: 30px 100px; font-family: 'KGHAPPYSolid', sans-serif"
         > 
             Nos pizzas
         </h1>
-    </body>
-</html>
+        
+        <!-- Note concernant les plats halal -->
+        <div class="halal-note">
+            <p>* = halal</p>
+        </div>
+        
      <main>
                 <div class="allCards">
                 <!-- Carte 1 -->
@@ -517,7 +523,7 @@
 
         </main>
 
-        <h1 
+        <h1 id="entrees"
             style="padding: 30px 100px; font-family: 'KGHAPPYSolid', sans-serif"
         >
             Nos entrées
@@ -592,7 +598,7 @@
             </div>
         </div>
 
-        <h1
+        <h1 id="salades"
             style="padding: 30px 100px; font-family: 'KGHAPPYSolid', sans-serif"
         >
             Nos salades
@@ -651,7 +657,7 @@
             </div>
         </div>
 </section>
-        <h1
+        <h1 id="desserts"
             style="padding: 30px 100px; font-family: 'KGHAPPYSolid', sans-serif"
         >
             Nos desserts
@@ -750,7 +756,7 @@
             </div>
         </div>
 
-        <h1
+        <h1 id="boissons"
             style="padding: 30px 100px; font-family: 'KGHAPPYSolid', sans-serif"
         >
             Nos boissons
@@ -942,3 +948,84 @@
   </footer>
     </body>
 </html>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Sélectionne tous les liens avec des ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Ferme le menu mobile si ouvert
+                document.getElementById('navContainer').classList.remove('open');
+                document.querySelector('.menu-icon').textContent = '☰';
+                
+                // Récupère la cible du lien
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Calcule l'offset pour tenir compte du header fixe
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    // Scroll smooth vers la cible
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+
+
+
+
+// Script à ajouter à la fin de votre HTML pour mettre en évidence la section active pendant le défilement
+document.addEventListener('DOMContentLoaded', function() {
+    // Récupère tous les liens de navigation
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    // Fonction pour mettre à jour les classes actives
+    function updateActiveLinks() {
+        // Position actuelle du défilement plus un petit offset
+        const scrollPosition = window.scrollY + 150; // L'offset peut être ajusté
+        
+        // Vérifie chaque section pour voir si elle est visible
+        navLinks.forEach(link => {
+            const targetId = link.getAttribute('href');
+            if (targetId.startsWith('#')) {
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    const sectionTop = targetSection.offsetTop;
+                    const sectionHeight = targetSection.offsetHeight;
+                    
+                    // Si la position de défilement est dans cette section
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        // Supprime la classe active de tous les liens
+                        navLinks.forEach(navLink => {
+                            navLink.classList.remove('active');
+                        });
+                        
+                        // Ajoute la classe active au lien correspondant à cette section
+                        link.classList.add('active');
+                    }
+                }
+            }
+        });
+    }
+    
+    // Ajoute un écouteur d'événement pour le défilement
+    window.addEventListener('scroll', updateActiveLinks);
+    
+    // Exécute une fois au chargement de la page
+    updateActiveLinks();
+});
+
+
+</script>
+
+

@@ -1,50 +1,4 @@
-/* Animation pour la section contact */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.contact-title {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.contact-info-container {
-    animation: fadeInUp 0.8s ease-out 0.2s forwards;
-    opacity: 0;
-}
-
-.contact-buttons {
-    animation: fadeInUp 0.8s ease-out 0.4s forwards;
-    opacity: 0;
-}
-
-.map {
-    animation: fadeInUp 0.8s ease-out 0.6s forwards;
-    opacity: 0;
-}
-
-/* Effet de pulsation pour le téléphone */
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 99, 71, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(255, 99, 71, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 99, 71, 0);
-    }
-}
-
-.contact-button:first-child {
-    animation: pulse 2s infinite;
-}/* Reset et bases */
+/* Reset et bases */
 * {
     margin: 0;
     padding: 0;
@@ -209,6 +163,33 @@ body {
     z-index: 1001;
 }
 
+/* Close menu button */
+.close-menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1010;
+    display: none;
+}
+
+.nav-container.open .close-menu-btn {
+    display: block;
+}
+
+/* Animation pour le bouton de fermeture */
+.close-icon {
+    transition: transform 0.3s ease;
+}
+
+.close-icon:hover {
+    transform: rotate(90deg);
+}
+
 /* Order now button */
 .order-now-btn {
     background-color: #ffd700;
@@ -236,6 +217,24 @@ body {
     padding: 10px 0;
     background: rgba(209, 53, 49, 0.95);
     backdrop-filter: blur(10px);
+}
+
+/* Note halal */
+.halal-note {
+    background-color: #fff;
+    color: #ff6347;
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+    font-family: "KGHAPPYSolid", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.halal-note p {
+    margin: 0;
 }
 
 /* GOOGLE REVIEW SECTION */
@@ -467,8 +466,6 @@ h2 {
     transition: all 0.3s ease-in-out;
 }
 
-
-      
 .menus-wrapper {
     display: flex;
     justify-content: center;
@@ -1217,6 +1214,54 @@ h1.avis {
     padding: 20px 0;
 }
 
+/* Animation pour la section contact */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-title {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.contact-info-container {
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+.contact-buttons {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+.map {
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+/* Effet de pulsation pour le téléphone */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 99, 71, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 99, 71, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 99, 71, 0);
+    }
+}
+
+.contact-button:first-child {
+    animation: pulse 2s infinite;
+}
+
 /* RESPONSIVE DESIGN */
 /* Tablettes et petits écrans (768px à 1024px) */
 @media (max-width: 980px) {
@@ -1523,4 +1568,19 @@ h1.avis {
         width: 75%;
         height: 130px;
     }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styles pour les sections cibles avec padding-top pour l'ancrage */
+section[id], h1[id] {
+    scroll-margin-top: 80px; /* Ajuster selon la hauteur de votre header */
+}
+
+/* Style pour mettre en évidence la section active */
+.nav-links li a.active {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.3);
 }
